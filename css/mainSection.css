@@ -1,0 +1,337 @@
+.main-section {
+  display: grid;
+  grid-template-columns: 16rem auto 30rem;
+  gap: 1.2rem;
+  width: 100%;
+}
+/* *** styleing sidebar *** */
+.sidebar {
+  padding: 0.5rem 0;
+}
+.sidebar-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+  position: relative;
+}
+.sidebar-container_content ul {
+  list-style: none;
+  width: 100%;
+}
+.sidebar-container_content li {
+  padding: 1rem 3rem;
+  width: 100%;
+  margin: 1rem 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.15s linear;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  color: var(--color-gray-light);
+}
+.middle-feed_cards-content li a {
+  color: var(--color-gray-light) !important;
+}
+.active-li {
+  background: var(--color-white);
+  border-left: 0.8rem solid var(--color-purple);
+  color: var(--color-purple) !important;
+  padding-left: 0.5rem !important;
+}
+
+.sidebar-container_content li:hover {
+  padding-left: 0.5rem;
+  background: var(--color-white);
+  border-left: 0.8rem solid var(--color-purple);
+  color: var(--color-purple) !important;
+}
+.sidebar-container_update-section {
+  width: 100%;
+}
+.sidebar-container_update-section__content {
+  background: var(--color-white);
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--border-radius-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar-container_update-section__content span {
+  margin: 1rem 0;
+  font-weight: bold;
+  font-size: 2.8rem;
+}
+.sidebar-container_update-section__content h4 {
+  font-weight: bold;
+  margin: 1rem;
+}
+.sidebar-container_update-section__content button {
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  background: var(--color-purple);
+  color: var(--color-white);
+  border-radius: var(--border-radius-1);
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+.sidebar-container_update-section__content button:hover {
+  opacity: 0.8;
+}
+
+/* *** FEED Styling *** */
+.feed {
+  padding: 0.5rem 0;
+}
+
+/* *** middle feed *** */
+.middle-feed_header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.middle-feed_header input {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.middle-feed_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: var(--padding-1);
+}
+
+.middle-feed_cards-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 187, 182);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 187, 182, 1) 0%,
+    rgba(255, 67, 54, 1) 59%
+  );
+  border-radius: var(--border-radius-1);
+  padding: var(--card-padding);
+  color: var(--color-light);
+  overflow: hidden;
+  min-width: 27rem;
+}
+
+/* *** shadow box *** */
+.shadow-box {
+  box-shadow: 0 2rem 3rem var(--color-primary-light);
+}
+
+.cuurence-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.cuurence-section span i {
+  border: 1px solid var(--color-light);
+  padding: var(--padding-2);
+  border-radius: var(--border-radius-2);
+  outline: none;
+  font-weight: bold;
+}
+
+.balance-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+.balance-section img {
+  width: 15%;
+}
+
+.date-section {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: var(--color-light);
+}
+
+.date-section_1 p {
+  color: var(--color-light);
+}
+
+.date-section_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* *** monthly styleign *** */
+
+.monthly-report {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.monthly-report details {
+  outline: none;
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+
+.monthly-report details::selection {
+  background: transparent;
+}
+
+/* *** payment *** */
+
+.payment-section {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.payment-section .badges {
+  display: flex;
+  gap: 1.3rem;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.payment-section .badges .badge span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.payment-section .badges .badge {
+  padding: 0.5rem var(--card-padding);
+  background: var(--color-white);
+  border-radius: var(--border-radius-2);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.15s linear;
+}
+
+.payment-section .badges .badge:hover {
+  box-shadow: 0 0 1.5rem var(--color-primary-light);
+  cursor: pointer;
+}
+
+.payment-section .badge:first-child span {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  height: fit-content;
+  font-style: 1.5rem;
+}
+
+.payment-section .badge div {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* *** chart styling *** */
+
+canvas#chart {
+  background: var(--color-white);
+  max-width: 100%;
+  margin-top: 2rem;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+
+/* ***  investment section *** */
+.right-feed {
+  width: 100%;
+}
+.investment {
+  background: var(--color-white);
+  border-radius: var(--border-radius-1);
+  padding: 2rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.investment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.investment-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3.5rem;
+}
+
+.investment-header a {
+  color: var(--color-purple);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.investment_boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.investment-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border-bottom: 1px solid var(--color-light);
+  padding: 2rem;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.investment-content:last-child {
+  border-bottom: 0;
+}
+.investment-content:hover {
+  background: var(--color-light);
+}
+.investment-content h5 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.investment-content img {
+  width: 40px;
+}
+.investment-content div h6 {
+  font-size: 1rem;
+}
+
+/* *** transactions styling *** */
+
+.transactions {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 2rem 0;
+}
