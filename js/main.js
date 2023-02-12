@@ -37,3 +37,29 @@ new Chart(chart, {
         responsive: true,
     },
 });
+
+// showing and hideing the sidebar
+
+const burgerBTN = document.querySelector('.menu-btn');
+const closeBTN = document.querySelector('.close-btn');
+const sidebarContent = document.querySelector('aside');
+
+console.log(closeBTN);
+
+burgerBTN.addEventListener('click', () => {
+    sidebarContent.classList.add('sidebar-showing');
+});
+
+closeBTN.addEventListener('click', () => {
+    sidebarContent.classList.remove("sidebar-showing");
+});
+
+//Dark & light mode
+
+const themeBTN = document.querySelector('.mode-container');
+
+themeBTN.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    themeBTN.querySelector('span:first-child').classList.toggle('active');
+    themeBTN.querySelector('span:last-child').classList.toggle('active');
+});
