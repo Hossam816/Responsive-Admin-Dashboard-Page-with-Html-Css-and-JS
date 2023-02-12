@@ -1,0 +1,103 @@
+/* *** media for tablets screen ***/
+
+@media screen and (max-width: 1024px) {
+  nav .search-container {
+    display: none;
+  }
+
+  nav .props-content {
+    gap: 2rem;
+  }
+  nav .props-content .menu-btn {
+    display: inline;
+    cursor: pointer;
+    background: transparent;
+    color: var(--color-dark);
+  }
+  .main-section {
+    grid-template-columns: 1fr;
+  }
+  main aside {
+    position: fixed;
+    background: var(--color-white);
+    top: 0;
+    left: -100%;
+    z-index: 3;
+    width: 22rem;
+    height: 100vh;
+    box-shadow: 2rem 0 2rem var(--color-primary-light);
+    display: none;
+  }
+  main aside .close-btn {
+    cursor: pointer;
+    background: transparent;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 4;
+    color: var(--color-dark);
+  }
+  main aside .sidebar-container {
+    margin-top: 4rem;
+  }
+  main aside .sidebar-container_update-section {
+    display: none;
+  }
+  main .feed .middle-feed .middle-feed_cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  main canvas {
+    margin: 3rem 0 1rem;
+  }
+  main .right-feed .investment-container {
+    align-items: normal;
+  }
+  main .right-feed .investment_boxes {
+    align-items: normal;
+  }
+  main .right-feed .transactions {
+    margin-top: 3rem;
+  }
+}
+
+/* *** media for phones screen *** */
+
+@media screen and (max-width: 700px) {
+  nav .props-content {
+    gap: 2.5rem;
+  }
+  nav .props-content_img h5,
+  nav .props-content_img .fa-angle-down {
+    display: none;
+  }
+  main .feed .middle-feed .middle-feed_cards {
+    grid-template-columns: 1fr;
+  }
+  .middle-feed_cards .balance-section {
+    width: 100%;
+  }
+  .monthly-report {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .payment-section {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3rem;
+    gap: 1rem;
+  }
+}
+.sidebar-showing {
+  display: block;
+  transition: all 0.25s linear;
+  animation: sidebanimation 0.25s linear forwards;
+}
+
+@keyframes sidebanimation {
+  to {
+    left: 0;
+  }
+}
